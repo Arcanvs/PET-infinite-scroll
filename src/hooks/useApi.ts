@@ -9,7 +9,10 @@ export const useApi = () => {
         ({ pageParam = 1 }) =>
           axios
             .get(`https://rickandmortyapi.com/api/character/?page=${pageParam}`)
-            .then(res => res.data),
+            .then(res => {
+                console.log('MIRA ',res.data)
+                return res.data
+            }),
         {
           getNextPageParam: (lastPage: Response) => {
             const previousPage = lastPage.info.prev
@@ -24,6 +27,7 @@ export const useApi = () => {
     )
     
     const characters = useMemo(() => data?.pages.reduce((prev, page) => {
+        console.log(page.results)
         return {
             info: page.info,
             results: [...prev.results, ...page.results]

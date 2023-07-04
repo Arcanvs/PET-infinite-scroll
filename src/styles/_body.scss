@@ -1,0 +1,62 @@
+body {
+    font-family: $fontDroidSans;
+    margin: 0;
+    padding: 0;
+    background-color: $bodyColor;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a{
+    text-decoration: none;
+}
+
+.card{
+    background: $cardBgColor;
+    border: 1px solid $cardBorderColor;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 460px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.card-header{
+    padding: 20px;
+	height: 40px;
+}
+
+.card-user-image{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+    max-width: 400px;
+}
+
+.card-time{
+	float: right;
+	width: 80px;
+	padding-top:10px;
+	text-align: right;
+	color: #999;
+}
+
+.card-user-name{
+	margin-left:20px;
+	font-weight:bold;
+    color: $colorText;
+}
+
+.card-content{
+    padding: 20px;
+}
+
+.episodes{
+    font-weight: bold;
+}
+
+.card-content-user{
+    font-weight: bold;
+    color: $colorText;
+}
