@@ -4,7 +4,5 @@ export default interface Result {
     image: string;
     status: string;
     species: string;
-    type: string;
     episode: string[];
-
 }

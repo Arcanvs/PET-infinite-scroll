@@ -25,7 +25,6 @@ const App: FC = () => {
               name={character.name} 
               status={character.status}
               species={character.species}
-              type={character.type}
               episode={character.episode}
             />
           ))

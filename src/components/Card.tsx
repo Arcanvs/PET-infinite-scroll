@@ -3,7 +3,7 @@ import Result from '../interfaces/result';
 
 
 
-const Card: FC<Result> = ({ name, image, status, species, type, episode }) => {
+const Card: FC<Result> = ({ name, image, status, species, episode }) => {
   return (
     <div className="card">
         <div className="card-header">
@@ -11,7 +11,9 @@ const Card: FC<Result> = ({ name, image, status, species, type, episode }) => {
             <a className="card-user-name">{ name }</a>
             <div className="card-time">
                 {
-                    status === 'Alive' ? <>🟢</> : <>🔴</>
+                    status === 'Alive' ? <span className="material-symbols-outlined">heart_check</span> : 
+                    status === 'Dead' ? <span className="material-symbols-outlined">deceased</span> :
+                    <span className="material-symbols-outlined">mystery</span>
                 }
             </div>
         </div>
@@ -23,7 +25,7 @@ const Card: FC<Result> = ({ name, image, status, species, type, episode }) => {
         <div className="card-content">
             <p className="episodes">{episode.length} Episodios</p>
             <p>
-                <a className="card-content-user">{ name }</a> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem voluptas reprehenderit beatae incidunt saepe voluptatem ipsa odit harum, recusandae fugiat, velit aut pariatur facilis vero assumenda, odio rem officia magni.
+                <a className="card-content-user">{ name }</a> is a { species }
             </p>
         </div>
     </div>
