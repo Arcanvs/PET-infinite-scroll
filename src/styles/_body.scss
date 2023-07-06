@@ -60,3 +60,8 @@ a{
     font-weight: bold;
     color: $colorText;
 }
+.loading{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
