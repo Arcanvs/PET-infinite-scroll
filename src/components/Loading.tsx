@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from 'react'
 
 const Loading: FC = () => {
     const [classLoading, setClassLoading] = useState<string>('');
-    const clockLoader = ['clock_loader_10', 'clock_loader_20', 'clock_loader_40', 'clock_loader_60', 'clock_loader_80', 'clock_loader_90'];
+    const [clockLoader] = useState<string[]>(['clock_loader_10', 'clock_loader_20', 'clock_loader_40', 'clock_loader_60', 'clock_loader_80', 'clock_loader_90']);
     const [countLoading, setCountLoading] = useState<number>(1);
     useEffect(() => {
         const interval = setInterval(() => {
@@ -12,9 +12,9 @@ const Loading: FC = () => {
                 setCountLoading(1);
             }
             setClassLoading(clockLoader[countLoading - 1]);
-        }, 1000);
+        }, 500);
         return () => clearInterval(interval);
-    }, [classLoading, countLoading]);
+    }, [countLoading, classLoading, clockLoader]);
   return (
     <div className='loading'>
         <span className="material-symbols-outlined">{classLoading}</span>

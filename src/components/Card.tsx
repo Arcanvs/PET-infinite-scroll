@@ -19,7 +19,7 @@ const Card: FC<Result> = ({ name, image, status, species, episode }) => {
         </div>
   
         <div className="card-image">
-            <img src={ image } height="460px"/>
+            <img src={ image } width="100%"/>
         </div>
   
         <div className="card-content">
