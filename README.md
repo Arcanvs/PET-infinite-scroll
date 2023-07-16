@@ -4,7 +4,9 @@
 
 ## Hola! 🖖🏻
 
-El siguiente sitio es un scroll infinito construido en react utilizando la API de [Rick & Morty](https://rickandmortyapi.com/)
+El siguiente sitio es un scroll infinito construido en react utilizando la API de [Rick & Morty](https://rickandmortyapi.com/).
+
+Por acá un preview del [sitio](https://arcanvs.github.io/PET-infinite-scroll/)
 
 ## Herramientas 🧰
 
